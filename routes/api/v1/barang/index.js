@@ -1,6 +1,6 @@
 "use strict";
 
-const { simpanBarang } = require("./barang.controller");
+const { simpanBarang, ambilBarang } = require("./barang.controller");
 
 const baseUrl = "/v1";
 
@@ -9,5 +9,11 @@ module.exports = (server) => {
         method: "POST",
         path: baseUrl + "/barang",
         config: simpanBarang
+    });
+
+    server.route({
+        method: "GET",
+        path: baseUrl + "/barang",
+        config: ambilBarang
     });
 };

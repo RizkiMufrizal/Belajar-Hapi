@@ -13,13 +13,16 @@
 3. joi => validation request
 4. sequelize => ORM
 5. postgresql => database
+6. log4js => logging
+7. log4js-node/logstashudp => logging to elk
+8. node-cache => cache
 
 ## Task
 
 -   [x] validation
 -   [x] ORM with database
 -   [ ] Authentication
--   [ ] Caching
+-   [x] Caching
 -   [x] Logging
 -   [x] Log to ELK
 -   [ ] Audit Log
