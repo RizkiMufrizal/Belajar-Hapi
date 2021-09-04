@@ -26,10 +26,11 @@ log4js.configure({
         }
     },
     categories: {
-        default: { appenders: ["logstash", "filelog", "out"], level: "info" }
+        default: { appenders: ["logstash", "filelog", "out"], level: "info" },
+        non_logstash: { appenders: ["filelog", "out"], level: "info" }
     }
 });
 
 module.exports = {
-    logger: log4js.getLogger()
+    logger: log4js.getLogger("non_logstash")
 };
