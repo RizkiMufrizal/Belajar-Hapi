@@ -1,6 +1,6 @@
 "use strict";
 
-const { showHelloWorld } = require("./hello-world.controller");
+const { showHelloWorld, postMessage } = require("./hello-world.controller");
 const baseUrl = "/v1";
 
 module.exports = (server) => {
@@ -8,5 +8,11 @@ module.exports = (server) => {
         method: "GET",
         path: baseUrl + "/hello",
         config: showHelloWorld
+    });
+
+    server.route({
+        method: "POST",
+        path: baseUrl + "/hello",
+        config: postMessage
     });
 };
