@@ -1,6 +1,7 @@
 "use strict";
 
 const Hapi = require("@hapi/hapi");
+const Sequelize = require("sequelize");
 
 require("dotenv").config();
 
@@ -15,7 +16,31 @@ const init = async () => {
     });
 
     await server.register(
-        [routes],
+        [
+            {
+                plugin: require("hapi-sequelizejs"),
+                options: [
+                    {
+                        name: "Belajar",
+                        models: [__dirname + "/models/**/*.js"],
+                        sequelize: new Sequelize(
+                            process.env.DB_NAME,
+                            process.env.DB_USERNAME,
+                            process.env.DB_PASSWORD,
+                            {
+                                logging: false,
+                                host: process.env.DB_HOSTNAME,
+                                port: process.env.DB_PORT,
+                                dialect: "postgres"
+                            }
+                        ),
+                        sync: true,
+                        forceSync: false
+                    }
+                ]
+            },
+            routes
+        ],
         {
             routes: {
                 prefix: process.env.ROUTE_PREFIX
