@@ -15,14 +15,15 @@
 5. postgresql => database
 
 ## Task
-- [x] validation
-- [x] ORM with database
-- [ ] Authentication
-- [ ] Caching
-- [ ] Logging 
-- [ ] Log to ELK
-- [ ] Audit Log
-- [ ] Docker Support
-- [ ] Automated Test
-- [ ] Mock Automated Test
-- [ ] Microservice connection
+
+-   [x] validation
+-   [x] ORM with database
+-   [ ] Authentication
+-   [ ] Caching
+-   [x] Logging
+-   [ ] Log to ELK
+-   [ ] Audit Log
+-   [ ] Docker Support
+-   [ ] Automated Test
+-   [ ] Mock Automated Test
+-   [ ] Microservice connection
