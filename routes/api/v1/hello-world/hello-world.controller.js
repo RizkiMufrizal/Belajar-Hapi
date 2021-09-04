@@ -1,11 +1,14 @@
 "use strict";
 
 const Joi = require("joi");
+const appRoot = require("app-root-path");
+const { logger } = require(appRoot + "/config/logger");
 
 module.exports = {
     showHelloWorld: {
         handler: (request, h) => {
             const message = "Hello World";
+            logger.info(message);
             return h.response(message).header("x-custom", "12345").code(200);
         }
     },

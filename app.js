@@ -5,6 +5,7 @@ const Sequelize = require("sequelize");
 
 require("dotenv").config();
 
+const { logger } = require("./config/logger");
 const routes = require("./routes");
 
 const init = async () => {
@@ -52,11 +53,11 @@ const init = async () => {
     );
 
     await server.start();
-    console.log("Server running on %s", server.info.uri);
+    logger.info("Server running on %s", server.info.uri);
 };
 
 process.on("unhandledRejection", (err) => {
-    console.log(err);
+    logger.error(err);
     process.exit(1);
 });
 
