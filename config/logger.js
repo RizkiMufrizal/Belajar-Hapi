@@ -18,10 +18,15 @@ log4js.configure({
             pattern: ".yyyy-MM-dd",
             compress: true,
             daysToKeep: 7
+        },
+        logstash: {
+            type: "@log4js-node/logstashudp",
+            host: "localhost",
+            port: 5144
         }
     },
     categories: {
-        default: { appenders: ["filelog", "out"], level: "info" }
+        default: { appenders: ["logstash", "filelog", "out"], level: "info" }
     }
 });
 
