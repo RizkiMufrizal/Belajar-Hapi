@@ -21,7 +21,7 @@
 -   [ ] Authentication
 -   [ ] Caching
 -   [x] Logging
--   [ ] Log to ELK
+-   [x] Log to ELK
 -   [ ] Audit Log
 -   [ ] Docker Support
 -   [ ] Automated Test
