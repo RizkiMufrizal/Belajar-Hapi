@@ -28,6 +28,6 @@
 -   [x] Log to ELK
 -   [ ] Audit Log
 -   [x] Docker Support
--   [ ] Automated Test
+-   [x] Automated Test
 -   [ ] Mock Automated Test
 -   [ ] Microservice connection
