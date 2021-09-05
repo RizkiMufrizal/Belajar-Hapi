@@ -16,6 +16,7 @@
 6. log4js => logging
 7. log4js-node/logstashudp => logging to elk
 8. node-cache => cache
+9. Automated Test => Jest
 
 ## Task
 
