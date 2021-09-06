@@ -5,8 +5,9 @@ const Sequelize = require("sequelize");
 
 require("dotenv").config();
 
+const routes = require("./plugins/routes");
+const cron = require("./plugins/cron");
 const { logger } = require("./config/logger");
-const routes = require("./routes");
 
 const init = async () => {
     const server = Hapi.Server({
@@ -40,7 +41,8 @@ const init = async () => {
                     }
                 ]
             },
-            routes
+            routes,
+            cron
         ],
         {
             routes: {
@@ -59,7 +61,7 @@ const init = async () => {
 };
 
 process.on("unhandledRejection", (err) => {
-    logger.error(err);
+    //logger.error(err);
     process.exit(1);
 });
 

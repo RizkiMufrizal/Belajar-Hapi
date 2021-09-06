@@ -1,8 +1,8 @@
 "use strict";
 
-const Joi = require("joi");
 const axios = require("axios");
 const appRoot = require("app-root-path");
+
 const { logger } = require(appRoot + "/config/logger");
 
 module.exports = {

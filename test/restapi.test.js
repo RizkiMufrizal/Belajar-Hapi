@@ -1,8 +1,8 @@
 const request = require("supertest");
 const axios = require("axios");
 const appRoot = require("app-root-path");
-const { logger } = require(appRoot + "/config/logger");
-const { init } = require("../server");
+
+const { init } = require(appRoot + "/server");
 
 jest.mock("axios");
 
@@ -35,6 +35,6 @@ describe("GET /api/v1/httpbin", () => {
                     "87de87d8-5089-4a53-a2d7-2dab62f1a5e4"
                 );
             })
-            .catch((err) => logger.error(err));
+            .catch((err) => console.error(err));
     });
 });

@@ -19,6 +19,7 @@
 9. Automated Test => Jest
 10. Automated REST API Test => supertest
 11. Http Client => axios
+12. Scheduler => node cron
 
 ## Task
 
@@ -32,7 +33,6 @@
 -   [x] Docker Support
 -   [x] Automated Test
 -   [x] Mock REST API Automated Test
--   [ ] Mock Database Automated Test
 -   [x] Http Client
 -   [ ] Microservice connection
--   [ ] Scheduler
+-   [x] Scheduler

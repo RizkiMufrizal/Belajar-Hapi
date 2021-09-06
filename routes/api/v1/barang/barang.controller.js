@@ -2,8 +2,9 @@
 
 const Joi = require("joi");
 const appRoot = require("app-root-path");
-const { cache, isExis } = require(appRoot + "/config/cache");
+
 const { logger } = require(appRoot + "/config/logger");
+const { cache, isExis } = require(appRoot + "/config/cache");
 
 module.exports = {
     simpanBarang: {
