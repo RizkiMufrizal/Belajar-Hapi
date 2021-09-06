@@ -2,7 +2,7 @@
 
 module.exports = {
     showHelloWorld: {
-        handler: (request, h) => {
+        handler: async (request, h) => {
             const message = {
                 Message: "Hello World"
             };

@@ -7,7 +7,7 @@
         "test": "test"
     },
     "scripts": {
-        "test": "jest"
+        "test": "jest --verbose"
     },
     "author": "",
     "license": "ISC",
@@ -15,6 +15,7 @@
         "@hapi/hapi": "^20.1.5",
         "@log4js-node/logstashudp": "^1.2.1",
         "app-root-path": "^3.0.0",
+        "axios": "^0.21.3",
         "dotenv": "^10.0.0",
         "hapi-sequelizejs": "^4.5.0",
         "joi": "^17.4.2",
@@ -25,7 +26,8 @@
         "sequelize": "^6.6.5"
     },
     "devDependencies": {
-        "jest": "^27.1.0"
+        "jest": "^27.1.0",
+        "supertest": "^6.1.6"
     },
     "jest": {
         "verbose": true

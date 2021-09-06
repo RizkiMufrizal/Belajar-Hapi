@@ -17,6 +17,8 @@
 7. log4js-node/logstashudp => logging to elk
 8. node-cache => cache
 9. Automated Test => Jest
+10. Automated REST API Test => supertest
+11. Http Client => axios
 
 ## Task
 
@@ -29,5 +31,8 @@
 -   [ ] Audit Log
 -   [x] Docker Support
 -   [x] Automated Test
--   [ ] Mock Automated Test
+-   [x] Mock REST API Automated Test
+-   [ ] Mock Database Automated Test
+-   [x] Http Client
 -   [ ] Microservice connection
+-   [ ] Scheduler

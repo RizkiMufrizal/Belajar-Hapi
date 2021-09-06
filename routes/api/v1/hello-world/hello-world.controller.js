@@ -6,14 +6,14 @@ const { logger } = require(appRoot + "/config/logger");
 
 module.exports = {
     showHelloWorld: {
-        handler: (request, h) => {
+        handler: async (request, h) => {
             const message = "Hello World";
             logger.info(message);
             return h.response(message).header("x-custom", "12345").code(200);
         }
     },
     postMessage: {
-        handler: (request, h) => {
+        handler: async (request, h) => {
             const message = {
                 Success: true,
                 Message: request.payload
