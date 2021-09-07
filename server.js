@@ -57,6 +57,29 @@ const init = async () => {
     await server.start();
     logger.info("Server running on %s", server.info.uri);
 
+    server.events.on("response", function (request) {
+        const log = {
+            url: {
+                href: request.url.href,
+                origin: request.url.origin,
+                pathname: request.url.pathname,
+                search: request.url.search
+            },
+            request: {
+                payload: request.payload,
+                header: request.headers
+            },
+            response: {
+                payload: request.response._payload._data,
+                header: request.response.headers
+            },
+            method: request.method.toUpperCase(),
+            httpStatus: request.response.statusCode
+        };
+
+        logger.info(log);
+    });
+
     return server;
 };
 
