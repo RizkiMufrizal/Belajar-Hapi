@@ -25,7 +25,6 @@
 
 -   [x] validation
 -   [x] ORM with database
--   [ ] Authentication
 -   [x] Caching
 -   [x] Logging
 -   [x] Log to ELK
@@ -34,5 +33,4 @@
 -   [x] Automated Test
 -   [x] Mock REST API Automated Test
 -   [x] Http Client
--   [ ] Microservice connection
 -   [x] Scheduler
